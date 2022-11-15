@@ -1,9 +1,41 @@
-/*!*********************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./source/page_login/css/index.css ***!
-  \*********************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js!./source/page_login/css/index.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+@font-face {
+  font-family: 'robotobold';
+  src: url(../../assets/fonts/roboto-bold-webfont.woff2) format("woff2"), url(../../assets/fonts/roboto-bold-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotomedium';
+  src: url(../../assets/fonts/roboto-medium-webfont.woff2) format("woff2"), url(../../assets/fonts/roboto-medium-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotolight';
+  src: url(../../assets/fonts/roboto-light-webfont.woff2) format("woff2"), url(../../assets/fonts/roboto-light-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url(../../assets/fonts/roboto-regular-webfont.woff2) format("woff2"), url(../../assets/fonts/roboto-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotothin';
+  src: url(../../assets/fonts/roboto-thin-webfont.woff2) format("woff2"), url(../../assets/fonts/roboto-thin-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*
 ! tailwindcss v3.2.2 | MIT License | https://tailwindcss.com
-*//*
+*/
+
+/*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
@@ -342,6 +374,7 @@ button,
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
+
 :disabled {
   cursor: default;
 }
@@ -375,6 +408,7 @@ video {
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
+
 [hidden] {
   display: none;
 }
@@ -423,8 +457,7 @@ video {
   --tw-backdrop-invert:  ;
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
+  --tw-backdrop-sepia:  ; }
 
 ::backdrop {
   --tw-border-spacing-x: 0;
@@ -470,84 +503,60 @@ video {
   --tw-backdrop-invert:  ;
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-}
+  --tw-backdrop-sepia:  ; }
 .m-auto {
-  margin: auto;
-}
+  margin: auto; }
 .flex {
-  display: flex;
-}
+  display: flex; }
 .h-full {
-  height: 100%;
-}
+  height: 100%; }
 .h-6 {
-  height: 1.5rem;
-}
+  height: 1.5rem; }
 .w-full {
-  width: 100%;
-}
+  width: 100%; }
 .w-6 {
-  width: 1.5rem;
-}
+  width: 1.5rem; }
+.w-56 {
+  width: 14rem; }
 .flex-row {
-  flex-direction: row;
-}
+  flex-direction: row; }
 .flex-col {
-  flex-direction: column;
-}
+  flex-direction: column; }
 .items-center {
-  align-items: center;
-}
+  align-items: center; }
 .justify-center {
-  justify-content: center;
-}
+  justify-content: center; }
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * (1 - var(--tw-space-y-reverse)));
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse)); }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * (1 - var(--tw-space-x-reverse)));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.bg-white {
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse))); }
+.bg-sky-100 {
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-}
+  background-color: rgba(224, 242, 254, var(--tw-bg-opacity)); }
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-}
+  line-height: 1.75rem; }
 .font-semibold {
-  font-weight: 600;
-}
+  font-weight: 600; }
 .text-amber-500 {
   --tw-text-opacity: 1;
-  color: rgba(245, 158, 11, var(--tw-text-opacity));
-}
+  color: rgba(245, 158, 11, var(--tw-text-opacity)); }
 .text-yellow-300 {
   --tw-text-opacity: 1;
-  color: rgba(253, 224, 71, var(--tw-text-opacity));
-}
+  color: rgba(253, 224, 71, var(--tw-text-opacity)); }
 .text-sky-500 {
   --tw-text-opacity: 1;
-  color: rgba(14, 165, 233, var(--tw-text-opacity));
-}
-.dark .dark\:bg-purple-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(147, 51, 234, var(--tw-bg-opacity));
-}
+  color: rgba(14, 165, 233, var(--tw-text-opacity)); }
 .dark .dark\:bg-neutral-900 {
   --tw-bg-opacity: 1;
-  background-color: rgba(23, 23, 23, var(--tw-bg-opacity));
-}
+  background-color: rgba(23, 23, 23, var(--tw-bg-opacity)); }
 .dark .dark\:text-purple-600 {
   --tw-text-opacity: 1;
-  color: rgba(147, 51, 234, var(--tw-text-opacity));
-}
-
+  color: rgba(147, 51, 234, var(--tw-text-opacity)); }
 

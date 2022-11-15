@@ -14,8 +14,8 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'assets/js/[contenthash].bundle.js',
-        assetModuleFilename: 'assets/images/[name][ext]',
-        clean: true
+        assetModuleFilename: 'assets/fonts/[name][ext]',
+        clean: false
     },
 
 
@@ -24,7 +24,18 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|svg)$/,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator : {
+                    filename : "assets/media/[name][ext]"
+                }
+            },
+
+            {
+                test: /\.(woff|woff2)$/,
+                type: 'asset/resource',
+                generator : {
+                    filename : "assets/fonts/[name][ext]"
+                }
             },
 
             {
@@ -39,7 +50,6 @@ module.exports = {
                     }
                 ]
             },
-
             {
                 test: /\.css$/i,
                 use: [
@@ -61,7 +71,7 @@ module.exports = {
             },
 
             {
-                test: /\.scss$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     {
                         loader: CssMiniExtractPlugin.loader,

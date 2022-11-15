@@ -4,7 +4,8 @@ import * as ReactDOM from 'react-dom/client';
 import Login from "../components/Login.js"
 
 /* PAGE: Stylesheets */
-import style from "../css/index.css"
+import style from "../css/index.scss"
+
 
 initialize();
 
