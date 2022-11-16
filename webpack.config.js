@@ -7,13 +7,20 @@ module.exports = {
 
     mode: 'development',
 
+    watch: true,
+
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000,
+    },
+
     entry: {
         page_login: './source/page_login/main/index.js',
     },
 
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'assets/js/[contenthash].bundle.js',
+        filename: 'assets/js/[name].bundle.js',
         assetModuleFilename: 'assets/fonts/[name][ext]',
         clean: false
     },
@@ -25,16 +32,16 @@ module.exports = {
             {
                 test: /\.(png|svg)$/,
                 type: 'asset/resource',
-                generator : {
-                    filename : "assets/media/[name][ext]"
+                generator: {
+                    filename: "assets/media/[name][ext]"
                 }
             },
 
             {
                 test: /\.(woff|woff2)$/,
                 type: 'asset/resource',
-                generator : {
-                    filename : "assets/fonts/[name][ext]"
+                generator: {
+                    filename: "assets/fonts/[name][ext]"
                 }
             },
 
@@ -76,8 +83,9 @@ module.exports = {
                     {
                         loader: CssMiniExtractPlugin.loader,
                     },
-                    { 
-                        loader: 'css-loader', options: { importLoaders: 1 } },
+                    {
+                        loader: 'css-loader', options: { importLoaders: 1 }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -112,11 +120,11 @@ module.exports = {
 
     plugins: [
         new CssMiniExtractPlugin({
-            filename: "assets/css/[name].css" 
+            filename: "assets/css/[name].css"
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             template: 'source/page_login/html/login.html',
-            filename: "[name].html" 
+            filename: "[name].html"
         })
     ],
 
