@@ -10,7 +10,12 @@ module.exports = {
 
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif']
+        'roboto': ['Roboto', 'sans-serif'],
+        'nexa' : ['Nexa', 'sans-serif']
+      },
+      colors: {
+        'colorPrimary' : '#0EA5E9',
+        'colorBlack' : '#181818'
       },
     }
 
