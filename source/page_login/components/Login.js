@@ -3,16 +3,16 @@ import React, { useState } from "react"
 // MUI 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch'
 import { ThemeProvider } from "@mui/material";
 
-// React-Icons
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
+// React
+import LoginHeader from './LoginHeader'
 
 // Scripts
 import { muiDarkTheme, muiLightTheme, setTailwindDarkTheme } from "../scripts/theme";
-import GoogleLogin from "./GoogleLogin";
 
+// Google
+import GoogleLogin from "./GoogleLogin";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
@@ -20,8 +20,8 @@ export default function Login() {
 
     const [darkTheme, setMuiDarkTheme] = useState(false);
 
-    const changeTheme = (changeToDark) => {
-        if (changeToDark) {
+    const changeTheme = () => {
+        if (!darkTheme) {
             setMuiDarkTheme(true);
             setTailwindDarkTheme(true);
         }
@@ -33,26 +33,14 @@ export default function Login() {
 
     return (
         <GoogleOAuthProvider clientId={"1031178534860-439stql0akhglcemdgqr1k2e0rak1r6n.apps.googleusercontent.com"}>
-
             <ThemeProvider theme={darkTheme ? muiDarkTheme : muiLightTheme}>
 
                 <div className="flex flex-col h-full">
 
-                    <div className="flex items-center justify-between my-10 mx-10 flex-initial">
 
-                        <div>
-                        
-                        </div>
+                    <LoginHeader changeThemeHandler={changeTheme}>
 
-                        <div className="bg-white border-2 rounded-xl shadow-xl w-64 py-5 px-10 flex flex-row space-x-4 justify-center items-center
-                                        dark:bg-neutral-800 dark:border-neutral-800">
-                            <BsFillSunFill className="text-amber-500 w-6 h-6" />
-                            <Switch onChange={() => changeTheme(!darkTheme)} />
-                            <BsFillMoonFill className="text-yellow-300 w-6 h-6" />
-                        </div>
-
-                    </div>
-
+                    </LoginHeader>
 
                     <div className="w-full flex flex-row flex-initial items-center justify-center mb-10">
                         <span className="text-colorPrimary font-nexa text-5xl font-bold">

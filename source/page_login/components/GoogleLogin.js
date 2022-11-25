@@ -14,7 +14,6 @@ function Login() {
 
 
     return (
-        <GoogleOAuthProvider clientId={clientId}>
             <Button
                 onClick={() => login()}
                 sx={{ mb: 2 }}
@@ -23,7 +22,6 @@ function Login() {
                 startIcon={<BsGoogle />}>
                 Войти с Google
             </Button>
-        </GoogleOAuthProvider>
     );
 }
 
