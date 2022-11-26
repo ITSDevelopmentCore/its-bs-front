@@ -16,13 +16,14 @@ module.exports = {
 
     entry: {
         page_login: './source/page_login/main/index.js',
+        page_main: './source/page_main/main/index.js'
     },
 
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'assets/js/[name].bundle.js',
         assetModuleFilename: 'assets/fonts/[name][ext]',
-        clean: false
+        clean: true
     },
 
 
@@ -115,6 +116,7 @@ module.exports = {
                     chunks: 'all',
                 },
             },
+            chunks: 'all'
         },
     },
 
@@ -124,8 +126,15 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'source/page_login/html/login.html',
-            filename: "[name].html"
-        })
+            chunks: ['page_login'],
+            filename: "login.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: 'source/page_main/html/main.html',
+            chunks: ['page_main'],
+            filename: "main.html"
+        }),
+        
     ],
 
 }
