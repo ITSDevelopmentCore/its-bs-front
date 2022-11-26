@@ -23,7 +23,9 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
 // MUI
 import Switch from '@mui/material/Switch'
-export default function SideMenu() {
+
+
+export default function SideMenu(props) {
 
   return (
     <Drawer
@@ -43,7 +45,9 @@ export default function SideMenu() {
         <List>
 
           <ListItem disablePadding>
-            <ListItemButton disableRipple>
+            <ListItemButton onClick={() => {
+              props.menuListener("WindowUserBots");
+            }} disableRipple>
               <ListItemIcon>
                 <SiRobotframework color={"#fff"}/>
               </ListItemIcon>
