@@ -1,29 +1,18 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import { ListItemIcon } from '@mui/material';
-import { Button } from '@mui/material';
 
-// Icons, used in component
+// MUI Components
+import { ListItemIcon, ListItemText, ListItemButton, ListItem, Divider, List, Toolbar, Drawer, Box, Button, Switch } from '@mui/material';
+
+// Icons
 import { SiRobotframework, SiOpslevel } from 'react-icons/si';
 import { AiFillDollarCircle } from 'react-icons/ai';
 import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BiExit } from 'react-icons/bi';
-
-const drawerWidth = 240;
-
-// React-Icons
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
-// MUI
-import Switch from '@mui/material/Switch'
+import { WINDOW_TAG_BILLING, WINDOW_TAG_USER, WINDOW_TAG_USER_BOTS, WINDOW_TAG_EDITOR } from "../../lib/navigation/Navigator";
 
+const drawerWidth = 240;
 
 export default function SideMenu(props) {
 
@@ -45,20 +34,29 @@ export default function SideMenu(props) {
         <List>
 
           <ListItem disablePadding>
-            <ListItemButton onClick={() => {
-              props.menuListener("WindowUserBots");
-            }} disableRipple>
+            <ListItemButton
+              onClick={() => props.menuItemClickListener(WINDOW_TAG_USER_BOTS)}
+              disableRipple>
+
               <ListItemIcon>
-                <SiRobotframework color={"#fff"}/>
+                <SiRobotframework color={"#fff"} />
               </ListItemIcon>
+
               <ListItemText primary={"Мои проекты"} />
+
             </ListItemButton>
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton disableRipple>
-              <ListItemIcon><SiOpslevel /></ListItemIcon>
+            <ListItemButton
+              disableRipple>
+
+              <ListItemIcon>
+                <SiOpslevel />
+              </ListItemIcon>
+
               <ListItemText primary={"Шаблоны"} />
+
             </ListItemButton>
           </ListItem>
 
@@ -68,16 +66,31 @@ export default function SideMenu(props) {
 
         <List>
           <ListItem disablePadding>
-            <ListItemButton disableRipple>
-              <ListItemIcon><AiFillDollarCircle /></ListItemIcon>
+            <ListItemButton
+              onClick={() => props.menuItemClickListener(WINDOW_TAG_BILLING)}
+              disableRipple>
+
+              <ListItemIcon>
+                <AiFillDollarCircle />
+              </ListItemIcon>
+
               <ListItemText primary={"Биллинг"} />
+
             </ListItemButton>
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton disableRipple>
-              <ListItemIcon><MdOutlineAccountCircle /></ListItemIcon>
+
+            <ListItemButton
+              disableRipple
+              onClick={() => props.menuItemClickListener(WINDOW_TAG_USER)}>
+
+              <ListItemIcon>
+                <MdOutlineAccountCircle />
+              </ListItemIcon>
+
               <ListItemText primary={"Аккаунт"} />
+
             </ListItemButton>
           </ListItem>
         </List>
