@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // MUI Components
-import { ListItemIcon, ListItemText, ListItemButton, ListItem, Divider, List, Toolbar, Drawer, Box, Button, Switch } from '@mui/material';
+import { Divider, Toolbar, Drawer, Box, Button, Switch } from '@mui/material';
 
 // Icons
 import { SiRobotframework, SiOpslevel } from 'react-icons/si';
@@ -10,7 +10,8 @@ import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BiExit } from 'react-icons/bi';
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
-import { WINDOW_TAG_BILLING, WINDOW_TAG_USER, WINDOW_TAG_USER_BOTS, WINDOW_TAG_EDITOR } from "../../lib/navigation/Navigator";
+import { WINDOW_TAG_BILLING, WINDOW_TAG_USER, WINDOW_TAG_USER_BOTS } from "../../lib/navigation/Navigator";
+
 
 const drawerWidth = 240;
 
@@ -22,80 +23,67 @@ export default function SideMenu(props) {
       sx={{
         width: drawerWidth,
         flexShrink: 0,
-        [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+        [`& .MuiPaper-root`]: {
+          width: drawerWidth, 
+          boxSizing: 'border-box' 
+        },
+
       }}
     >
       <Toolbar sx={{
-        height: "20vh"
+        height: "10vh"
       }} />
 
-      <Box sx={{ overflow: 'auto' }}>
+      <Button
+        sx={{ height: 50 }}
+        onClick={() => props.menuItemClickListener(WINDOW_TAG_USER_BOTS)}
+        style={{ justifyContent: "flex-start" }}>
 
-        <List>
+        <div className="font-blue-500 mx-4">
+          <SiRobotframework size={32}  />
+        </div>
+        <span className='text-sm'>Мои проекты</span>
 
-          <ListItem disablePadding>
-            <ListItemButton
-              onClick={() => props.menuItemClickListener(WINDOW_TAG_USER_BOTS)}
-              disableRipple>
+      </Button>
+      <Button
+        sx={{ height: 50 }}
+        onClick={() => props.menuItemClickListener(WINDOW_TAG_USER)}
+        style={{ justifyContent: "flex-start" }}>
 
-              <ListItemIcon>
-                <SiRobotframework color={"#fff"} />
-              </ListItemIcon>
+        <div className="font-blue-500 mx-4">
+          <SiOpslevel size={32} />
+        </div>
+        <span className='text-sm'>Шаблоны</span>
 
-              <ListItemText primary={"Мои проекты"} />
+      </Button>
+      <Divider />
+      <Toolbar sx={{
+        height: "10vh"
+      }} />
+      <Button
+        sx={{ height: 50 }}
+        onClick={() => props.menuItemClickListener(WINDOW_TAG_BILLING)}
+        style={{ justifyContent: "flex-start" }}>
 
-            </ListItemButton>
-          </ListItem>
+        <div className="font-blue-500 mx-4">
+          <AiFillDollarCircle size={32} />
+        </div>
+        <span className='text-sm'>Биллинг</span>
 
-          <ListItem disablePadding>
-            <ListItemButton
-              disableRipple>
+      </Button>
 
-              <ListItemIcon>
-                <SiOpslevel />
-              </ListItemIcon>
+      <Button
+        sx={{ height: 50 }}
+        onClick={() => props.menuItemClickListener(WINDOW_TAG_USER)}
+        style={{ justifyContent: "flex-start" }}>
 
-              <ListItemText primary={"Шаблоны"} />
+        <div className="font-blue-500 mx-4">
+          <MdOutlineAccountCircle size={32} />
+        </div>
+        <span className='text-sm'>Аккаунт</span>
 
-            </ListItemButton>
-          </ListItem>
+      </Button>
 
-        </List>
-
-        <Divider />
-
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton
-              onClick={() => props.menuItemClickListener(WINDOW_TAG_BILLING)}
-              disableRipple>
-
-              <ListItemIcon>
-                <AiFillDollarCircle />
-              </ListItemIcon>
-
-              <ListItemText primary={"Биллинг"} />
-
-            </ListItemButton>
-          </ListItem>
-
-          <ListItem disablePadding>
-
-            <ListItemButton
-              disableRipple
-              onClick={() => props.menuItemClickListener(WINDOW_TAG_USER)}>
-
-              <ListItemIcon>
-                <MdOutlineAccountCircle />
-              </ListItemIcon>
-
-              <ListItemText primary={"Аккаунт"} />
-
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-      </Box>
       <Box className='flex flex-col-reverse flex-auto'>
 
         <Button sx={{
@@ -106,7 +94,7 @@ export default function SideMenu(props) {
         <div className="bg-white py-5 px-10 flex flex-row space-x-4 justify-center items-center
                                         dark:bg-neutral-800 dark:border-neutral-800">
           <BsFillSunFill className="text-amber-500 w-6 h-6" />
-          <Switch />
+          <Switch onChange={props.changeThemeListener}/>
           <BsFillMoonFill className="text-yellow-300 w-6 h-6" />
         </div>
 

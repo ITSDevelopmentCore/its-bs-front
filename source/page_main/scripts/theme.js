@@ -1,44 +1,31 @@
-import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils'
-import { useTheme } from '@mui/styles';
-import { alpha } from '@mui/material';
+import { alpha, createTheme } from '@mui/material';
+
 /**
  * MUI Components Theme
  */
 
-const baseThemeOptions = {
+const baseThemeOptions = createTheme({
 
   typography: {
-    fontFamily: 'robotoregular, sans-serif',
+    "fontFamily": '"robotomedium" sans-serif',
+    "fontWeight": '600',
     button: {
       textTransform: "none"
     }
   },
+  
+});
 
-};
 
 export const muiLightTheme = createTheme(deepmerge({
 
   palette: {
     primary: {
       main: "#2563eb",
-    }
+    },
   },
 
-  components : {
-    MuiListItemButton : {
-      styleOverrides: {
-        root: {
-          background : "#2563eb",
-          margin : "10px",
-          color: "#fff",
-          border : "1 solid #2563eb",
-          "border-radius" : "5px",
-          height : "40px"
-        }
-      }
-    }
-  }
 
 }, baseThemeOptions));
 
@@ -47,18 +34,25 @@ export const muiDarkTheme = createTheme(deepmerge({
   palette: {
     primary: {
       main: "#93c5fd",
-    },
-  },
-  
-  components: {
+    }
 
+  },
+
+  components: {
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          background: "#171717"
+        }
+      }
+    },
     MuiTextField: {
 
       styleOverrides: {
 
         root: {
-          
-          '& label' : 
+
+          '& label':
           {
             color: alpha("#93c5fd", 0.5),
           },

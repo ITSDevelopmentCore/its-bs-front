@@ -530,10 +530,11 @@ video {
 .mx-10 {
   margin-left: 2.5rem;
   margin-right: 2.5rem; }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem; }
 .mb-10 {
   margin-bottom: 2.5rem; }
-.ml-\[240px\] {
-  margin-left: 240px; }
 .flex {
   display: flex; }
 .h-full {
@@ -573,8 +574,6 @@ video {
   border-radius: 0.75rem; }
 .border-2 {
   border-width: 2px; }
-.border {
-  border-width: 1px; }
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgba(255, 255, 255, var(--tw-border-opacity)); }
@@ -584,18 +583,17 @@ video {
 .bg-sky-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(224, 242, 254, var(--tw-bg-opacity)); }
-.bg-cyan-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(6, 182, 212, var(--tw-bg-opacity)); }
 .bg-red-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(239, 68, 68, var(--tw-bg-opacity)); }
-.bg-yellow-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(234, 179, 8, var(--tw-bg-opacity)); }
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(34, 197, 94, var(--tw-bg-opacity)); }
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops)); }
+.from-cyan-500 {
+  --tw-gradient-from: #06b6d4;
+  --tw-gradient-to: rgba(6, 182, 212, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6; }
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem; }
@@ -613,6 +611,9 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1; }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem; }
 .font-bold {
   font-weight: 700; }
 .text-colorPrimary {
