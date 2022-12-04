@@ -15,8 +15,8 @@ module.exports = {
     },
 
     entry: {
-        page_login: './source/page_login/main/index.js',
-        page_main: './source/page_main/main/index.js'
+        page_login: './source/page-login/main/index.js',
+        page_main: './source/page-main/main/index.js'
     },
 
     output: {
@@ -125,12 +125,12 @@ module.exports = {
             filename: "assets/css/[name].css"
         }),
         new HtmlWebpackPlugin({
-            template: 'source/page_login/html/login.html',
+            template: 'source/page-login/html/login.html',
             chunks: ['page_login'],
             filename: "login.html"
         }),
         new HtmlWebpackPlugin({
-            template: 'source/page_main/html/main.html',
+            template: 'source/page-main/html/main.html',
             chunks: ['page_main'],
             filename: "main.html"
         }),

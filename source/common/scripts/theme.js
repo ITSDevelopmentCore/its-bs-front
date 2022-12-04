@@ -1,7 +1,8 @@
 import { createTheme } from '@mui/material';
 import { deepmerge } from '@mui/utils'
-import { useTheme } from '@mui/styles';
 import { alpha } from '@mui/material';
+
+
 /**
  * MUI Components Theme
  */
@@ -9,12 +10,14 @@ import { alpha } from '@mui/material';
 const baseThemeOptions = {
 
   typography: {
-    fontFamily: 'robotoregular, sans-serif',
+    fontFamily: 'roboto, sans-serif',
     button: {
       textTransform: "none"
+    },
+    body:{
+      fontWeight: 700
     }
   },
-
 };
 
 export const muiLightTheme = createTheme(deepmerge({
@@ -36,6 +39,14 @@ export const muiDarkTheme = createTheme(deepmerge({
   },
   
   components: {
+
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          background: "#262626"
+        }
+      }
+    },
 
     MuiTextField: {
 

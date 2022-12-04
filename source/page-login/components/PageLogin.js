@@ -9,7 +9,7 @@ import { ThemeProvider } from "@mui/material";
 import LoginHeader from './LoginHeader'
 
 // Scripts
-import { muiDarkTheme, muiLightTheme, setTailwindDarkTheme } from "../scripts/theme";
+import { muiDarkTheme, muiLightTheme, setTailwindDarkTheme } from "../../common/scripts/theme";
 
 // Google
 import GoogleLogin from "./GoogleLogin";

@@ -1,14 +1,11 @@
 import React, { useState } from "react"
 import { ThemeProvider } from "@mui/material";
 
+import Navigator from "../components/Navigator";
 import SideMenu from '../components/SideMenu';
-import MainWindow from '../components/MainWindow';
-import { muiDarkTheme, muiLightTheme } from "../scripts/theme";
+import { muiDarkTheme, muiLightTheme, setTailwindDarkTheme } from "../../common/scripts/theme";
 
-import { WINDOW_TAG_USER_BOTS } from "../../lib/navigation/Navigator";
-
-import { setTailwindDarkTheme } from "../scripts/theme";
-
+import { WINDOW_TAG_USER_BOTS } from "../components/Navigator";
 
 
 export default function Main() {
@@ -40,9 +37,9 @@ export default function Main() {
                 menuItemClickListener={menuUtemClickListener}>
             </SideMenu>
 
-            <MainWindow
-                currentWindowTag={currentWindow}>
-            </MainWindow>
+            <Navigator
+                currentWindowTag={WINDOW_TAG_USER_BOTS}>
+            </Navigator>
 
         </ThemeProvider>
     )
