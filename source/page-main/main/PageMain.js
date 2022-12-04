@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider, Box } from "@mui/material";
 
 import Navigator from "../components/Navigator";
 import SideMenu from '../components/SideMenu';
@@ -8,7 +8,7 @@ import { muiDarkTheme, muiLightTheme, setTailwindDarkTheme } from "../../common/
 import { WINDOW_TAG_USER_BOTS } from "../components/Navigator";
 
 
-export default function Main() {
+export default function PageMain() {
 
     const [darkTheme, setMuiDarkTheme] = useState(false);
 
@@ -32,15 +32,16 @@ export default function Main() {
     return (
         <ThemeProvider theme={darkTheme ? muiDarkTheme : muiLightTheme}>
 
-            <SideMenu
-                changeThemeListener={changeTheme}
-                menuItemClickListener={menuUtemClickListener}>
-            </SideMenu>
+            <Box className='pl-[240px]'>
+                <SideMenu
+                    changeThemeListener={changeTheme}
+                    menuItemClickListener={menuUtemClickListener}>
+                </SideMenu>
 
-            <Navigator
-                currentWindowTag={WINDOW_TAG_USER_BOTS}>
-            </Navigator>
-
+                <Navigator
+                    currentWindowTag={currentWindow}>
+                </Navigator>
+            </Box>
         </ThemeProvider>
     )
 }

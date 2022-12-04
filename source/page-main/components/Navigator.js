@@ -1,10 +1,10 @@
 import React from "react";
 
-import WindowUserBots from './windows/WindowUserBots';
-import WindowBilling from './windows/WindowBilling';
-import WindowEditor from './windows/WindowEditor';
-import WindowUser from './windows/WindowUser';
-import Window404 from './windows/windows_errors/Window404';
+import WindowUserBots from '../../page-main/components/windows/WindowUserBots';
+import WindowBilling from '../../page-main/components/windows/WindowBilling';
+import WindowEditor from '../../page-main/components/windows/WindowEditor';
+import WindowUser from '../../page-main/components/windows/WindowUser';
+import Window404 from '../../page-main/components/windows/windows_errors/Window404';
 
 export const WINDOW_TAG_EDITOR = "WindowEditor";
 export const WINDOW_TAG_USER = "WindowUser";

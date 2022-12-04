@@ -18,6 +18,16 @@ const baseThemeOptions = {
       fontWeight: 700
     }
   },
+
+  components: {
+    MuiCard: {
+      styleOverrides : {
+        root : {
+          borderRadius : 20
+        },
+      }
+    }
+  }
 };
 
 export const muiLightTheme = createTheme(deepmerge({
@@ -39,6 +49,25 @@ export const muiDarkTheme = createTheme(deepmerge({
   },
   
   components: {
+
+    MuiCard : {
+      disableTransition: {
+        transition: 'none',
+      },
+      styleOverrides : {
+
+        root : {
+          background: "#525252",
+          borderColor: "#93c5fd",
+          borderWidth: 2,
+          color: "#93c5fd",
+      
+        },
+        paper : {
+          background: "#525252"
+        }
+      }
+    },
 
     MuiDrawer: {
       styleOverrides: {
