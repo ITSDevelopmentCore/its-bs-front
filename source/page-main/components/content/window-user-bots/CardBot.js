@@ -9,7 +9,7 @@ export default function CardBotCreate() {
     function render() {
         return (
             <div
-                className={"p-4 min-w-[280px] h-[400px] rounded-xl bg-white m-6 cursor-pointer hover:scale-105 transition-all duration-200 " + tailwindDarkMode}
+                className={"shadow-2xl p-4 min-w-[280px] h-[400px] rounded-xl bg-white m-6 cursor-pointer hover:scale-105 transition-all duration-200 " + tailwindDarkMode}
                 elevation={6}>
 
                 <div className="text-white w-full h-[150px] rounded-xl bg-blue-500 flex justify-center items-center mb-4 text-7xl">

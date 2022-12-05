@@ -8,7 +8,7 @@ export default function CardBotUnavailable() {
   function render() {
     return (
       <div
-        className={"opacity-50 text-blue-800 min-w-[280px] h-[400px] rounded-xl bg-white m-6 flex justify-center items-center text-7xl cursor-pointer "+tailwindDarkMode}
+        className={"shadow-2xl opacity-50 text-blue-800 min-w-[280px] h-[400px] rounded-xl bg-white m-6 flex justify-center items-center text-7xl cursor-pointer "+tailwindDarkMode}
         elevation={6}>
         <AiOutlineLock className="hover:animate-waving-hand"/>
       </div>)

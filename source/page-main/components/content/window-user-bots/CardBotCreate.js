@@ -8,7 +8,7 @@ export default function CardBotCreate() {
   function render() {
     return (
       <div
-        className={"min-w-[280px] h-[400px] text-blue-800 rounded-xl bg-white m-6 flex justify-center items-center text-7xl cursor-pointer hover:scale-105 transition-all duration-200 "+tailwindDarkMode}
+        className={"shadow-2xl min-w-[280px] h-[400px] text-blue-800 rounded-xl bg-white m-6 flex justify-center items-center text-7xl cursor-pointer hover:scale-105 transition-all duration-200 "+tailwindDarkMode}
         elevation={6}>
         <AiOutlinePlus />
       </div>)
