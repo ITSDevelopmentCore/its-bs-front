@@ -20,6 +20,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@jsplumb/browser-ui": "^5.13.1",
     "@mui/material": "^5.10.13",
     "@react-oauth/google": "^0.5.0",
     "gapi-script": "^1.2.0",
@@ -27,6 +28,7 @@
     "react-app-polyfill": "^3.0.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
+    "reactflow": "^11.3.2",
     "sass": "^1.56.1"
   },
   "devDependencies": {
@@ -52,15 +54,15 @@
   },
   "browserslist": {
     "production": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
     "development": [
-    "ie 11",
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
-    }
+  }
 }

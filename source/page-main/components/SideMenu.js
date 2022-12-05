@@ -10,7 +10,7 @@ import { MdOutlineAccountCircle } from 'react-icons/md';
 import { BiExit } from 'react-icons/bi';
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 
-import { WINDOW_TAG_BILLING, WINDOW_TAG_USER, WINDOW_TAG_USER_BOTS } from "./Navigator";
+import { WINDOW_TAG_BILLING, WINDOW_TAG_USER, WINDOW_TAG_USER_BOTS, WINDOW_TAG_EDITOR } from "./Navigator";
 
 
 const drawerWidth = 240;
@@ -55,7 +55,7 @@ export default function SideMenu(props) {
 
       <Button
         sx={{ height: 50, justifyContent: 'flex-start', fontWeight: 700}}
-        onClick={() => props.menuItemClickListener(WINDOW_TAG_USER)}>
+        onClick={() => props.menuItemClickListener(WINDOW_TAG_EDITOR)}>
 
         <MdOutlineAccountCircle className='mx-4 text-[32px]'/>
         Аккаунт
